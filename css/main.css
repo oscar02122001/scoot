@@ -808,8 +808,6 @@ a {
 }
 
 .advice {
-  max-width: 1440px;
-  margin: 0 auto;
   margin-top: 200px;
   overflow: hidden;
 }
@@ -950,6 +948,10 @@ a {
 
 .advice__link--size {
   padding: 11px 41px;
+}
+
+.advice__container {
+  position: relative;
 }
 
 .advice__circle {

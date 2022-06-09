@@ -1,7 +1,6 @@
 .advice {
-
-    max-width: 1440px;
-    margin: 0 auto;
+    // max-width: 1440px;
+    // margin: 0 auto;
     margin-top: 200px;
     overflow: hidden;
 
@@ -151,7 +150,9 @@
 .advice__link--size {
     padding: 11px 41px;
 }
-
+.advice__container{
+    position: relative;
+}
 .advice__circle {
     position: absolute;
     display: block;
