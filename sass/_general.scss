@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    margin-top: 96px;
+    font-family: "Lexend Deca", Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    // overflow: hidden;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    // display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+@media only screen and (max-width:719px){
+    body{
+        margin-top: 60px;
+    }
+}
+
+@media only screen and (max-width:376px){
+    body{
+        margin-top: 30px;
+    }
+}
+

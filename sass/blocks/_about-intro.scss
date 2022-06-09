@@ -1,0 +1,110 @@
+.about-intro {
+    // max-width: 1440px;
+    // margin: 0 auto;
+    z-index: -2;
+    background-image: url("../images/abintro.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    // background-size: cover;
+    position: relative;
+    overflow: hidden;
+    
+
+    &::before {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: #2F3B59;
+        mix-blend-mode: normal;
+        opacity: 0.75;
+        content: '';
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+
+        background-image: url("../images/abintro@2x.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+}
+
+.about-intro__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 72px 0;
+    position: relative;
+}
+
+.about-intro__title {
+    max-width: 162px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 56px;
+    /* identical to box height, or 100% */
+    letter-spacing: -2.5px;
+    color: #FFFFFF;
+}
+.about-intro__wrap{
+    position: absolute;
+    padding: 0;
+    max-width: 243px;
+    right: -183px;
+    // margin-right: -187px;
+    box-sizing: border-box;
+}
+.about-intro__circle{
+    display:inline-block;
+    margin-right: 24px;
+    width: 62px;
+    height: 62px;
+    border: 3px solid #FFFFFF;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-sizing: border-box;
+
+    &:nth-child(3){
+        margin-right: 0;
+        background-color:#FFFFFF;
+    }
+}
+@media only screen and (max-width:1170px){
+    .about-intro__container{
+        padding:72px 0 72px 58px ;
+    }
+    .about-intro__wrap{
+        right: -50px;
+    }
+}
+@media only screen and (max-width:$mobile){
+    .about-intro__container{
+        padding: 60px 0;
+    
+    }
+    .about-intro__title{
+        width: 100%;
+        font-size: 40px;
+        line-height: 40px;
+        padding: 0 32px;
+        margin: 0 auto;
+        text-align: center;
+        
+    }
+    .about-intro__wrap{
+        display: none;
+    }
+}

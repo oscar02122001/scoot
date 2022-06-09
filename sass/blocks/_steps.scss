@@ -1,0 +1,224 @@
+.steps {
+
+    margin-top: 120px;
+
+
+}
+
+.steps__container {
+    position: relative;
+    
+}
+
+// .steps__helper {
+//     max-width: 973px;
+//     position: relative;
+//     transform: translateY(40px);
+//     -webkit-transform: translateY(40px);
+//     -moz-transform: translateY(40px);
+//     -ms-transform: translateY(40px);
+//     -o-transform: translateY(40px);
+// }
+
+.steps__line {
+    position: absolute;
+    display: block;
+    width: 973px;
+    height: 15px;
+    top: 0;
+    left: -150px;
+    background-color: #D8D8D8;
+    transform: translateY(40px);
+    -webkit-transform: translateY(40px);
+    -moz-transform: translateY(40px);
+    -ms-transform: translateY(40px);
+    -o-transform: translateY(40px);
+
+}
+
+.steps__list {
+    @include reset-list;
+    display: flex;
+}
+
+.steps__itom {
+    position: relative;
+    margin: 0;
+    padding: 136px 0 0 0;
+    max-width: calc((100% - 60px) /3);
+    margin-right: 30px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.steps__title {
+    padding: 0;
+    margin: 0;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -1.07143px;
+    color: #495567;
+}
+
+.steps__desc {
+    margin: 0;
+    padding: 0;
+    margin-top: 27px;
+    font-family: 'Lexend Deca';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: #939CAA;
+}
+
+.steps__circles {
+    position: absolute;
+    display: block;
+    width: 96px;
+    height: 96px;
+    top: 0;
+    background-color: $maincolor;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+
+    &--app {
+        background-image: url("../images/app.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &--scooter {
+        background-image: url("../images/scooter.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &--deliver {
+        background-image: url("../images/deliver.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
+
+@media only screen and (max-width:1110px) {
+    .steps__line {
+        max-width: 900px;
+
+    }
+}
+
+@media only screen and (max-width:970px) {
+    .steps__line {
+        max-width: 780px;
+
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .steps__container {
+        max-width: 573px;
+        padding-left: 98px;
+        padding-right: 98px;
+        margin: 0 auto;
+
+    }
+
+
+    .steps__line {
+        width: 15px;
+        height: 552px;
+        top: -162px;
+        left: 141px;
+        background-color: #D8D8D8;
+        // transform: translateX(57px);
+        // -webkit-transform: translateX(57px);
+        // -moz-transform: translateX(57px);
+        // -ms-transform: translateX(57px);
+        // -o-transform: translateX(57px);
+    }
+
+    .steps__list {
+        // display: flex;
+        flex-direction: column;
+
+    }
+
+    .steps__itom {
+        display: flex;
+        max-width: 100%;
+        flex-direction: row;
+        margin-right: 0;
+        margin-bottom: 40px;
+        padding: 0;
+        align-items: stretch;
+        //    margin: 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+    .steps__wrap {
+        margin-left: 179px;
+    }
+
+    //         .steps__circles{
+    //             transform: translateX(-58px);
+    //             -webkit-transform: translateX(-58px);
+    //             -moz-transform: translateX(-58px);
+    //             -ms-transform: translateX(-58px);
+    //             -o-transform: translateX(-58px);
+    // }
+}
+
+@media only screen and (max-width:$mobile) {
+    .steps__container {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+
+    .steps__line {
+        display: none;
+    }
+
+    .steps__list {
+        flex-direction: column;
+
+    }
+
+    .steps__itom {
+        max-width: 100%;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .steps__circles {
+        width: 56px;
+        height: 56px;
+
+    }
+
+    .steps__wrap {
+        margin-top: 80px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .steps__title {
+        font-size: 20px;
+    }
+
+}

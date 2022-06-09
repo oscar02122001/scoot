@@ -1,0 +1,154 @@
+.sign {
+    // max-width: 1440px;
+    // margin: 0 auto;
+    margin-top: 330px;
+    background-color: $titlecolor;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.sign__container {
+    position: relative;
+    padding: 102px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sign__text {
+    margin: 0;
+    padding: 0;
+    max-width: 415px;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -2.14286px;
+    color: #FFFFFF;
+
+}
+
+.sign__app,
+.sign__google {
+    // cursor: pointer;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.sign__links {
+    display: flex;
+    align-items: center;
+    // cursor: pointer;
+}
+
+.sign__img {
+    display: block;
+    // cursor: pointer;
+}
+
+.sign__google {
+
+    margin-left: 18px;
+}
+
+
+.sign__circle {
+    position: absolute;
+    display: block;
+    width: 317px;
+    height: 317px;
+    bottom: 0;
+    right: 70px;
+    mix-blend-mode: normal;
+    opacity: 0.1;
+    border: 15px solid #E5ECF4;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transform: translateY(55%);
+    -webkit-transform: translateY(55%);
+    -moz-transform: translateY(55%);
+    -ms-transform: translateY(55%);
+    -o-transform: translateY(55%);
+}
+
+.sign__circle--top {
+    transform: translate(-120%, 55%);
+    -webkit-transform: translate(-120%, 55%);
+    -moz-transform: translate(-120%, 55%);
+    -ms-transform: translate(-120%, 55%);
+    -o-transform: translate(-120%, 55%);
+}
+
+.sign__circle--end {
+    transform: translate(120%, 55%);
+    -webkit-transform: translate(120%, 55%);
+    -moz-transform: translate(120%, 55%);
+    -ms-transform: translate(120%, 55%);
+    -o-transform: translate(120%, 55%);
+    background-color: #E5ECF4;
+}
+
+// .sign__circle--middle{
+
+// }
+
+@media only screen and (max-width:992px) {
+    .sign{
+        margin-top: 100px;
+    }
+    .sign__container {
+        padding: 62px 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .sign__text{
+        margin-bottom: 40px;
+    }
+    .sign__circle--middle {
+        left: calc(50% - 173px);
+
+}
+    
+    .sign__circle--top {
+      left: 0;
+      bottom: 0;
+      transform: translate(-50%, 50%);
+      -webkit-transform: translate(-50%, 50%);
+      -moz-transform: translate(-50%, 50%);
+      -ms-transform: translate(-50%, 50%);
+      -o-transform: translate(-50%, 50%);
+}
+    
+    .sign__circle--end {
+       right: 0;
+       transform: translate(50%, 50%);
+       -webkit-transform: translate(50%, 50%);
+       -moz-transform: translate(50%, 50%);
+       -ms-transform: translate(50%, 50%);
+       -o-transform: translate(50%, 50%);
+}
+}
+
+@media only screen and (max-width:$mobile) {
+    .sign__container {
+        padding: 88px 0;
+        padding-right: 32px;
+        padding-left: 32px;
+       
+    }
+    .sign__text{
+        max-width: 311px;
+        font-size: 32px;
+        line-height: 32px;
+    }
+    .sign__circle--middle{
+        display: none;
+    }
+    
+}

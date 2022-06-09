@@ -1,0 +1,23 @@
+.get-link {
+    display: inline-block;
+    padding: 11px 36px;
+    font-family: 'Space Mono';
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    background-color: $maincolor;
+    color: #fff;
+    border: 3px solid transparent;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #fff;
+        border: 3px solid $maincolor;
+        color: $maincolor;
+        transition: 0.3s ease all;
+        -webkit-transition: 0.3s ease all;
+        -moz-transition: 0.3s ease all;
+        -ms-transition: 0.3s ease all;
+        -o-transition: 0.3s ease all;
+    }
+}
