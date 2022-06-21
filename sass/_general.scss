@@ -6,8 +6,18 @@ body {
     line-height: 1.5;
     // overflow: hidden;
     box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+.freez{
+    overflow: hidden;
+}
+main{
+    flex-grow: 1;
+}
 img {
     max-width: 100%;
     // display: block;

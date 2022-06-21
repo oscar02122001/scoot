@@ -1,10 +1,10 @@
 @keyframes open {
     0% {
-        transform: translateY(-30%);
-        -webkit-transform: translateY(-30%);
-        -moz-transform: translateY(-30%);
-        -ms-transform: translateY(-30%);
-        -o-transform: translateY(-30%);
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
 }
 
     100% {
@@ -14,6 +14,25 @@
         -ms-transform: translateY(0);
         -o-transform: translateY(0);
     }
+}
+
+@keyframes closing {
+    100% {
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+}
+
+    0% {
+        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+    }
+
 }
 
 .faqs {
@@ -73,6 +92,7 @@
     letter-spacing: -1.07143px;
     color: #495567;
     cursor: pointer;
+    z-index: 6;
 
     &:hover {
         background-color: #FFF4DF;
@@ -111,6 +131,7 @@
 
 
 
+
 }
 
 .faqs__wrap--top {
@@ -136,9 +157,28 @@
 }
 
 .faqs__qst.opened+.faqs__disc {
-    display: block;
+    display: flex;
     animation: open 300ms linear;
     -webkit-animation: open 300ms linear;
+}
+
+.faqs__qst.closing {
+    z-index: 6;
+    // margin-bottom: 16px;
+
+    &::before {
+        transform: rotate(0);
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+    }
+}
+
+.faqs__qst.closing+.faqs__disc {
+    // display: none;
+    animation: closing 300ms linear;
+    -webkit-animation: closing 300ms linear;
 }
 
 @media only screen and (max-width:$tablet) {
@@ -189,8 +229,6 @@
     }
 
     .faqs__qst {
-        // width: 219px;
-        // ma
         font-size: 18px;
         line-height: 24px;
 

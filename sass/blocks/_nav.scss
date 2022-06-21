@@ -1,6 +1,9 @@
 .nav {
+    display: flex;
     flex-grow: 1;
-    // margin-left: 58px
+    align-items: baseline;
+    justify-content: space-between;
+    
 }
 
 .nav__list {
@@ -17,7 +20,7 @@
 }
 
 .nav__link {
-    font-family: 'Space Mono',Arial, Helvetica, sans-serif;
+    font-family: 'Space Mono','Courier New', Courier, monospace;
     font-size: 15px;
     line-height: 25px;
     color: #939CAA;

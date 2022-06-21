@@ -3,10 +3,14 @@
     padding: 0 15px;
     margin: 0 auto;
 }
-
+@media only screen and (max-width:992px){
+    .container{
+        padding: 0 40px;
+    }
+}
 @media only screen and (max-width:719px) {
     .container {
-        padding: 0;
+        padding: 0 ;
     }
 }
 

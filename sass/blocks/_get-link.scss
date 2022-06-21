@@ -1,7 +1,7 @@
 .get-link {
     display: inline-block;
     padding: 11px 36px;
-    font-family: 'Space Mono';
+    font-family: 'Space Mono', 'Courier New', Courier, monospace;
     font-size: 15px;
     line-height: 25px;
     text-align: center;
@@ -11,7 +11,7 @@
     cursor: pointer;
 
     &:hover {
-        background-color: #fff;
+        background-color:transparent;
         border: 3px solid $maincolor;
         color: $maincolor;
         transition: 0.3s ease all;
