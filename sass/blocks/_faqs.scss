@@ -5,7 +5,7 @@
         -moz-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         -o-transform: translateY(-50%);
-}
+    }
 
     100% {
         transform: translateY(0);
@@ -23,7 +23,7 @@
         -moz-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         -o-transform: translateY(-50%);
-}
+    }
 
     0% {
         transform: translateY(0%);
@@ -160,6 +160,10 @@
     display: flex;
     animation: open 300ms linear;
     -webkit-animation: open 300ms linear;
+}
+
+.nane {
+    display: "nane";
 }
 
 .faqs__qst.closing {

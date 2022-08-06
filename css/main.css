@@ -1902,6 +1902,10 @@ a {
   -webkit-animation: open 300ms linear;
 }
 
+.nane {
+  display: "nane";
+}
+
 .faqs__qst.closing {
   z-index: 6;
 }

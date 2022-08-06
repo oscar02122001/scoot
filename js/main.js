@@ -20,30 +20,53 @@ nav.addEventListener("animationend", function (evt) {
 })
 
 
-const faqs__qst = document.querySelector(".faqs__qst");
-const faqs__disc = document.querySelector(".faqs__disc");
+const faqs__qst = document.querySelectorAll(".faqs__qst");
+const faqs__disc = document.querySelectorAll(".faqs__disc");
+
+function showContent() {
+    faqs__qst.forEach((item, i) => {
+        item.addEventListener("click", function () {
+            if (!faqs__qst[i].classList.contains("opened")) {
+                faqs__qst[i].classList.add("opened");
+            } else if (!faqs__qst[i].classList.contains("closing")) {
+                faqs__qst[i].classList.add("closing");
+
+            }
+            faqs__disc.forEach((item, i) => {
+                item.addEventListener("animationend", function (evt) {
+                    if (evt.animationName === "closing") {
+                        faqs__qst[i].classList.remove("opened");
+                        faqs__qst[i].classList.remove("closing");
+                    }
+                })
+            })
 
 
-// faqs__qst.addEventListener("click", () => {
-//     faqs__qst.classList.toggle("opened");
-//     faqs__disc.classList.toggle("opened");
+        })
+
+    })
+
+}
+
+showContent()
+
+
+
+// faqs__qst.addEventListener("click", function () {
+//     if (!faqs__qst.classList.contains("opened")) {
+//         faqs__qst.classList.add("opened");
+//         faqs__disc.classList.add("opened");
+//     } else if (!faqs__qst.classList.contains("closing")) {
+//         faqs__qst.classList.add("closing");
+//         faqs__disc.classList.add("closing");
+//     }
+
+
+// faqs__disc.addEventListener("animationend", function (evt) {
+//     if (evt.animationName === "closing") {
+//         faqs__qst.classList.remove("opened");
+//         faqs__disc.classList.remove("opened");
+//         faqs__qst.classList.remove("closing");
+//         faqs__disc.classList.remove("closing")
+//     }
 // })
-faqs__qst.addEventListener("click", function () {
-    if (!faqs__qst.classList.contains("opened")) {
-        faqs__qst.classList.add("opened");
-        faqs__disc.classList.add("opened");
-    } else if (!faqs__qst.classList.contains("closing")) {
-        faqs__qst.classList.add("closing");
-        faqs__disc.classList.add("closing");
-    }
-
-})
-
-faqs__disc.addEventListener("animationend", function (evt) {
-    if (evt.animationName === "closing") {
-        faqs__qst.classList.remove("opened");
-        faqs__disc.classList.remove("opened");
-        faqs__qst.classList.remove("closing");
-        faqs__disc.classList.remove("closing")
-    }
-})
